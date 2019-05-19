@@ -58,6 +58,7 @@ resource "google_compute_instance" "descomplicando-docker" {
 
  metadata_startup_script = <<SCRIPT
     curl -fsSL https://get.docker.com/ | bash
+    usermod -aG docker ubuntu
 SCRIPT
 
 }
