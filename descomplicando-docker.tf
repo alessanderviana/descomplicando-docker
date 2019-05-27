@@ -1,6 +1,5 @@
 variable "region" {
   default = "us-central1"
-  # default = "southamerica-east1"
 }
 variable "gcp_project" {
   default = "infra-como-codigo-e-automacao"
@@ -46,10 +45,6 @@ resource "google_compute_instance" "descomplicando-docker" {
  network_interface {
    subnetwork = "default"
    access_config { }
-   # If necessary update the firewall rule
-   # *****************************************************************************************************
-   # gcloud compute firewall-rules update YOUR_RULE_NAME --allow tcp:22,tcp:80,tcp:3389,tcp:8080,tcp:9000
-   # *****************************************************************************************************
  }
 
  metadata {
