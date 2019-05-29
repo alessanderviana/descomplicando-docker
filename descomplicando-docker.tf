@@ -40,8 +40,8 @@ resource "google_compute_instance" "descomplicando-docker" {
  boot_disk {
    initialize_params {
      # image = "ubuntu-1604-xenial-v20190306"
-     image = "ubuntu-minimal-1804-bionic-v20190514"
-     # image = "ubuntu-minimal-1904-disco-v20190528"
+     image = "ubuntu-1804-bionic-v20190514"
+     # image = "ubuntu-1904-disco-v20190514"
    }
  }
 
