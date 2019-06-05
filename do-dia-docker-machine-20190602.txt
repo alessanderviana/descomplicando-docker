@@ -1,0 +1,13 @@
+
+curl -L https://github.com/docker/machine/releases/download/v0.16.1/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && chmod +x /tmp/docker-machine
+
+sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+
+
+docker-machine create --driver amazonec2 --amazonec2-open-port 80 --amazonec2-open-port 4000 --amazonec2-region us-east-1 aws-swarm
+
+
+docker service create --name phoenix-app --replicas 2 --publish published=4000,target=4000 \
+                        registry.gitlab.com/alessanderviana/sre-challenge/elixir-phoenix:latest
+
+
