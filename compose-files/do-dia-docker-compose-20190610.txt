@@ -1,0 +1,38 @@
+
+curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+
+az login
+
+az network nsg rule create -g docker-machine --nsg-name azure-swarm-01-firewall --name AllowInNginx \
+    --direction Inbound --priority 310 --source-address-prefixes Internet --access Allow \
+    --destination-port-ranges 8080 --protocol Tcp --description "Allow Inbound Nginx on port 8080."
+
+az network nsg rule create -g docker-machine --nsg-name azure-swarm-01-firewall --name AllowOutNginx \
+    --direction Outbound --priority 100 --source-address-prefixes Internet --access Allow \
+    --destination-port-ranges 8080 --protocol Tcp --description "Allow Outbound Nginx."
+
+
+####################################################################################################################
+
+az network nsg rule create -g docker-machine --nsg-name azure-swarm-01-firewall --name AllowInWPress \
+    --direction Inbound --priority 320 --source-address-prefixes Internet --access Allow \
+    --destination-port-ranges 8000 --protocol Tcp --description "Allow Inbound WPress on port 8000."
+
+az network nsg rule create -g docker-machine --nsg-name azure-swarm-01-firewall --name AllowOutWPress \
+    --direction Outbound --priority 120 --source-address-prefixes Internet --access Allow \
+    --destination-port-ranges 8000 --protocol Tcp --description "Allow Outbound WPress."
+
+Password: W0rdPr335 sw4rm
+
+
+####################################################################################################################
+
+az network nsg rule create -g docker-machine --nsg-name azure-swarm-01-firewall --name AllowInVisualizer \
+    --direction Inbound --priority 330 --source-address-prefixes Internet --access Allow \
+    --destination-port-ranges 8888 --protocol Tcp --description "Allow Inbound Visualizer on port 8888."
+
+az network nsg rule create -g docker-machine --nsg-name azure-swarm-01-firewall --name AllowOutVisualizer \
+    --direction Outbound --priority 130 --source-address-prefixes Internet --access Allow \
+    --destination-port-ranges 8888 --protocol Tcp --description "Allow Visualizer WPress."
+
+
