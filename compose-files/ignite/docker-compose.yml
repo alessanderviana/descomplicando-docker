@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+    - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
+      MYSQL_DATABASE: ignite
+      MYSQL_USER: ignite
+      MYSQL_PASSWORD: ignite
+
+  ignite:
+    depends_on:
+    - db
+    image: solarwinds/dpa:latest
+    ports:
+    - 8123:8123
+    - 8124:8124
+    environment:
+      IGNITE_DB_HOST: db:3306
+      IGNITE_DB_USER: ignite
+      IGNITE_DB_PASSWORD: ignite
+
+volumes:
+  db_data:
