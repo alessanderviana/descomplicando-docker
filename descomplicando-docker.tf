@@ -29,7 +29,7 @@ provider "google" {
 
 // Linux instance - Ubuntu 16.04
 resource "google_compute_instance" "descomplicando-docker" {
- count = 3
+ count = 1
  name         = "descomplicando-docker-${count.index + 1}"
  # machine_type = "n1-standard-1"  # 3.75 GB RAM
  machine_type = "g1-small"  # 1.7 GB RAM
