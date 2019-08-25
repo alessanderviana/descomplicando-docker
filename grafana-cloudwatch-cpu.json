@@ -1,0 +1,223 @@
+{
+  "gridPos": {
+    "h": 9,
+    "w": 12,
+    "x": 0,
+    "y": 8
+  },
+  "id": 2,
+  "timeFrom": null,
+  "timeShift": null,
+  "title": "CPU usage",
+  "type": "graph",
+  "datasource": "CloudWatch",
+  "targets": [
+    {
+      "refId": "A",
+      "namespace": "AWS/EC2",
+      "metricName": "CPUUtilization",
+      "statistics": [
+        "Average"
+      ],
+      "dimensions": {
+        "InstanceId": "i-01001d58a87e44e59"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "B",
+      "namespace": "AWS/EC2",
+      "metricName": "CPUUtilization",
+      "statistics": [
+        "Average"
+      ],
+      "dimensions": {
+        "InstanceId": "i-01b2d78e2b9424b90"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "C",
+      "namespace": "AWS/EC2",
+      "metricName": "CPUUtilization",
+      "statistics": [
+        "Average"
+      ],
+      "dimensions": {
+        "InstanceId": "i-03471dd383570f7f3"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "D",
+      "namespace": "AWS/EC2",
+      "metricName": "CPUUtilization",
+      "statistics": [
+        "Average"
+      ],
+      "dimensions": {
+        "InstanceId": "i-03e96272c4e28bb37"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "E",
+      "namespace": "AWS/EC2",
+      "metricName": "CPUUtilization",
+      "statistics": [
+        "Average"
+      ],
+      "dimensions": {
+        "InstanceId": "i-06347e1126215bbf4"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "F",
+      "namespace": "AWS/EC2",
+      "metricName": "CPUUtilization",
+      "statistics": [
+        "Average"
+      ],
+      "dimensions": {
+        "InstanceId": "i-06f1872b95a8b4242"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "G",
+      "namespace": "AWS/EC2",
+      "metricName": "CPUUtilization",
+      "statistics": [
+        "Average"
+      ],
+      "dimensions": {
+        "InstanceId": "i-08eeb2d4f9f9a4d39"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "H",
+      "namespace": "AWS/EC2",
+      "metricName": "CPUUtilization",
+      "statistics": [
+        "Average"
+      ],
+      "dimensions": {
+        "InstanceId": "i-098f49703c66f5b91"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    }
+  ],
+  "links": [],
+  "cacheTimeout": null,
+  "pluginVersion": "6.3.3",
+  "aliasColors": {},
+  "bars": false,
+  "dashLength": 10,
+  "dashes": false,
+  "fill": 1,
+  "fillGradient": 0,
+  "legend": {
+    "avg": false,
+    "current": false,
+    "max": false,
+    "min": false,
+    "show": true,
+    "total": false,
+    "values": false,
+    "alignAsTable": false,
+    "rightSide": true
+  },
+  "lines": true,
+  "linewidth": 2,
+  "nullPointMode": "null",
+  "options": {
+    "dataLinks": []
+  },
+  "percentage": false,
+  "pointradius": 2,
+  "points": false,
+  "renderer": "flot",
+  "seriesOverrides": [],
+  "spaceLength": 10,
+  "stack": false,
+  "steppedLine": false,
+  "thresholds": [],
+  "timeRegions": [],
+  "tooltip": {
+    "shared": true,
+    "sort": 0,
+    "value_type": "individual"
+  },
+  "xaxis": {
+    "buckets": null,
+    "mode": "time",
+    "name": null,
+    "show": true,
+    "values": []
+  },
+  "yaxes": [
+    {
+      "format": "percent",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    },
+    {
+      "format": "short",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    }
+  ],
+  "yaxis": {
+    "align": false,
+    "alignLevel": null
+  },
+  "repeat": null
+}

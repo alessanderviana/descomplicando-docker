@@ -1,0 +1,148 @@
+{
+  "type": "graph",
+  "title": "Panel Title",
+  "gridPos": {
+    "x": 0,
+    "y": 0,
+    "w": 12,
+    "h": 8
+  },
+  "id": 4,
+  "targets": [
+    {
+      "refId": "A",
+      "namespace": "AWS/ApplicationELB",
+      "metricName": "RequestCount",
+      "statistics": [
+        "Sum"
+      ],
+      "dimensions": {
+        "LoadBalancer": "app/PRODAPI/36f0413cdf6a4b61"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "B",
+      "namespace": "AWS/ApplicationELB",
+      "metricName": "RequestCount",
+      "statistics": [
+        "Sum"
+      ],
+      "dimensions": {
+        "LoadBalancer": "app/PRODEXCHANGE/f6fecf4bfb0691f5"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "C",
+      "namespace": "AWS/ApplicationELB",
+      "metricName": "RequestCount",
+      "statistics": [
+        "Sum"
+      ],
+      "dimensions": {
+        "LoadBalancer": "app/testnet-app/3d5622923508f6f4"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    },
+    {
+      "refId": "D",
+      "namespace": "AWS/ApplicationELB",
+      "metricName": "RequestCount",
+      "statistics": [
+        "Sum"
+      ],
+      "dimensions": {
+        "LoadBalancer": "app/testnet-api/b5e7acbef7d8d5e2"
+      },
+      "period": "",
+      "region": "us-east-1",
+      "id": "",
+      "expression": "",
+      "returnData": false,
+      "highResolution": false
+    }
+  ],
+  "options": {
+    "dataLinks": []
+  },
+  "renderer": "flot",
+  "yaxes": [
+    {
+      "label": null,
+      "show": true,
+      "logBase": 1,
+      "min": null,
+      "max": null,
+      "format": "short"
+    },
+    {
+      "label": null,
+      "show": true,
+      "logBase": 1,
+      "min": null,
+      "max": null,
+      "format": "short"
+    }
+  ],
+  "xaxis": {
+    "show": true,
+    "mode": "time",
+    "name": null,
+    "values": [],
+    "buckets": null
+  },
+  "yaxis": {
+    "align": false,
+    "alignLevel": null
+  },
+  "lines": true,
+  "fill": 1,
+  "fillGradient": 0,
+  "linewidth": 1,
+  "dashes": false,
+  "dashLength": 10,
+  "spaceLength": 10,
+  "points": false,
+  "pointradius": 2,
+  "bars": false,
+  "stack": false,
+  "percentage": false,
+  "legend": {
+    "show": true,
+    "values": false,
+    "min": false,
+    "max": false,
+    "current": false,
+    "total": false,
+    "avg": false
+  },
+  "nullPointMode": "null",
+  "steppedLine": false,
+  "tooltip": {
+    "value_type": "individual",
+    "shared": true,
+    "sort": 0
+  },
+  "timeFrom": null,
+  "timeShift": null,
+  "aliasColors": {},
+  "seriesOverrides": [],
+  "thresholds": [],
+  "timeRegions": []
+}
