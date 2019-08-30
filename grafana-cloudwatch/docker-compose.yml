@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+  grafana:
+    image: grafana/grafana
+    volumes:
+      - type: bind
+        source: /Users/mse000000/.aws
+        target: /usr/share/grafana/.aws
+    ports:
+      - "3000:3000"
